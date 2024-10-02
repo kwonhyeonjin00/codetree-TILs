@@ -1,26 +1,21 @@
-def sequence(x, y):
-    if x == y:
-        return True
-    return False    
 n1, n2 = map(int, input().split())
 
-arr1 = input().split()
-arr2 = input().split()
+arr1 = list(map(int, input().split()))
+arr2 = list(map(int, input().split()))
 
-for i in range(n1 - n2 + 1):
-    x = ""
-    for j in range(n2):
-        x += arr1[i+j]
-    y = ""
-    for k in arr2:
-        y += k
-    if sequence(x, y):
-        z = 1
-        break
-    else:
-        z = 0
+def same(n):
+    for i in range(n2):
+        if arr1[n+i] != arr2[i]:
+            return False
+    return True
 
-if z == 1:
+def sequence(x, y):
+    for i in range(n1 - n2 + 1):
+        if same(i):
+            return True
+    return False
+
+if sequence(arr1, arr2):
     print("Yes")
 else:
     print("No")
