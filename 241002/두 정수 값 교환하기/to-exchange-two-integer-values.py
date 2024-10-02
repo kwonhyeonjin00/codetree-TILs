@@ -1,7 +1,6 @@
 def swap(a, b):
-    arr = [b, a]
-    return arr
+    return b, a
 
 n, m = map(int, input().split())
-for x in swap(n, m):
-    print(x, end=' ')
+a, b = swap(n, m)
+print(a, b)
