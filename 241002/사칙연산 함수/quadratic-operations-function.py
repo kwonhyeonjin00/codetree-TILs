@@ -11,8 +11,6 @@ def sik(a, b, c):
         print("False")
 
 a, b, c = input().split()
-
 a, c = int(a), int(c)
 
-print(f'{a} {b} {c} = {a + c}')
 sik(a, b, c)
