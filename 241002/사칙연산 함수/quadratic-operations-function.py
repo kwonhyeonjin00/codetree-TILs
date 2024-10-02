@@ -6,7 +6,7 @@ def sik(a, b, c):
     elif b == "*":
         print(a * c)
     elif b == "/":
-        print(a / c)
+        print(a // c)
 
 a, b, c = input().split()
 
