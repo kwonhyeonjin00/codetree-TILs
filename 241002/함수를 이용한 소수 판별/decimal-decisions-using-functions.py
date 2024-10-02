@@ -8,8 +8,11 @@ def is_prime(n):
 x = 0
 n, m = map(int, input().split())
 
-for i in range(n, m+1):
-    if is_prime(i):
-        x += i
+if m == 1:
+    print("0")
+else:
+    for i in range(n, m+1):
+        if is_prime(i):
+            x += i
 
 print(x)
