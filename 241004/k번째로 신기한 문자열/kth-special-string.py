@@ -11,6 +11,7 @@ while arr:
         if arr[0][i] != s[i]:
             arr.pop(0)
             x = 1
+            break
     if x == 0:
         arr2.append(arr.pop(0))
       
