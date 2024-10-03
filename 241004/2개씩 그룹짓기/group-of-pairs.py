@@ -1,16 +1,13 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-sum = 0
-for x in arr:
-    sum += x/n
+arr.sort()
+max = 0
 
-arr2 = []
+for i in range(n):
+    sums = arr[i] + arr[n*2-1-i]
 
-for i in range(n*2-1):
-    for j in range(i+1, n*2):
-        x = arr[i] + arr[j]
-        if x >= sum:
-            arr2.append(x)
+    if sums > max:
+        max = sums
 
-print(min(arr2))
+print(max)
