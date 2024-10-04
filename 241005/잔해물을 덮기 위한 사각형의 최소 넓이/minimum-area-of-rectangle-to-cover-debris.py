@@ -20,7 +20,7 @@ for j in range(x1, x2):
         arr[j][k] = 1
 
 x3, y3, x4, y4 = map(int, input().split())
-x3, y3, x4, y4 = x1+1000, y1+1000, x2+1000, y2+1000
+x3, y3, x4, y4 = x3+1000, y3+1000, x4+1000, y4+1000
 
 for j in range(x1, x2):
     for k in range(y1, y2):
@@ -30,4 +30,5 @@ for j in range(x1, x2):
 xt1, yt1 = check(arr)
 xt2, yt2 = check1(arr)
 
+print(xt1, yt1, xt2, yt2)
 print((xt2 - xt1 + 1) * (yt2 - yt1 + 1))
