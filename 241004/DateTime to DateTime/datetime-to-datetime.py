@@ -20,7 +20,13 @@ def f(a, b, c):
 
 
 a, b, c = map(int, input().split())
-if a >= 11 and b >= 11 and c >= 11:
+if a > 11:
     f(a, b, c)
 else:
-    print("-1")
+    if b > 11:
+        f(a, b, c)
+    else:
+        if c > 11:
+            f(a, b, c)
+        else:
+            print("-1")
