@@ -26,7 +26,7 @@ else:
     if b > 11:
         f(a, b, c)
     else:
-        if c > 11:
+        if c >= 11:
             f(a, b, c)
         else:
             print("-1")
