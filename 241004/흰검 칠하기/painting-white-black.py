@@ -1,7 +1,7 @@
 n = int(input())
-arr = [[0, '0'] for _ in range(n*200+1)]
+arr = [[0, '0'] for _ in range(n*198+1)]
 
-idx = n*100
+idx = n*99
 
 for i in range(n):
     x, t = input().split()
