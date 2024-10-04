@@ -14,6 +14,7 @@ def f(n):
         else:
             lens.append(cnt)
             cnt = 1
+    lens.append(cnt)
     print(max(lens))
 
 n = int(input())
