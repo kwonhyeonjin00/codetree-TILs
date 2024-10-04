@@ -4,7 +4,7 @@ def check(arr):
             if arr[i][j] == 1:
                 return i, j
             else:
-                return 0, 0
+                return 2001, 2001
 
 def check1(arr):
     for i in range(1999, -1, -1):
@@ -30,7 +30,7 @@ for j in range(x1, x2):
             arr[j][k] = 0
             
 xt1, yt1 = check(arr)
-if xt1, xt2 == 0, 0:
+if xt1 == 2001 and yt1 == 2001:
     print(0)
 else:
     xt2, yt2 = check1(arr)
