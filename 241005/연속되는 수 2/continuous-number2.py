@@ -11,9 +11,11 @@ if n > 1:
         num = int(input())
         if num != temp[0]:
             arr.append(len(temp))
+            temp = []
         else:
             temp.append(num)
 else:
     arr.append(1)
-    
+
+
 print(max(arr))
