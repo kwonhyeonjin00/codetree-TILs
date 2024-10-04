@@ -14,8 +14,11 @@ def f(a, b, c, d):
 
     diff = day1 - day2
     diff %= 7
-
-    print(days[7 - diff])
+    
+    if diff == 0:
+        print(days[0])
+    else:
+        print(days[7 - diff])
 
 
 m1, d1, m2, d2 = map(int, input().split())
