@@ -30,5 +30,4 @@ for j in range(x1, x2):
 xt1, yt1 = check(arr)
 xt2, yt2 = check1(arr)
 
-print(xt1, yt1, xt2, yt2)
 print((xt2 - xt1 + 1) * (yt2 - yt1 + 1))
