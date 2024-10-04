@@ -3,8 +3,8 @@ def check(arr):
         for j in range(2000):
             if arr[i][j] == 1:
                 return i, j
-            else:
-                return 2001, 2001
+            
+    return 2001, 2001
 
 def check1(arr):
     for i in range(1999, -1, -1):
