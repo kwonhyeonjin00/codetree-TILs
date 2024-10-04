@@ -16,7 +16,7 @@ for i in range(n):
                 arr[j][0] += 1
                 arr[j][1] = 'b'
 
-        idx += x
+        idx += x-1
     elif t == 'L':
         for j in range(idx, idx-x, -1):
             if arr[j][1] == 'g':
@@ -26,7 +26,7 @@ for i in range(n):
             else:
                 arr[j][0] += 1
                 arr[j][1] = 'w'
-        idx -= x 
+        idx -= x-1
 
 cnt_w = 0
 cnt_b = 0
