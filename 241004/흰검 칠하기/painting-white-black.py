@@ -27,7 +27,7 @@ for i in range(n):
             arr[j][0] += 1
             arr[j][1] = 'w'
         idx -= x 
-    print(arr)
+
 cnt_w = 0
 cnt_b = 0
 cnt_g = 0
