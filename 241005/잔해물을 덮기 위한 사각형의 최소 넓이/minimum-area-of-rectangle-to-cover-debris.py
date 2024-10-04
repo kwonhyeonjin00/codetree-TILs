@@ -19,15 +19,15 @@ for j in range(x1, x2):
     for k in range(y1, y2):
         arr[j][k] = 1
 
-x1, y1, x2, y2 = map(int, input().split())
-x1, y1, x2, y2 = x1+1000, y1+1000, x2+1000, y2+1000
+x3, y3, x4, y4 = map(int, input().split())
+x3, y3, x4, y4 = x1+1000, y1+1000, x2+1000, y2+1000
 
 for j in range(x1, x2):
     for k in range(y1, y2):
-        arr[j][k] = 0
-
+        if x3 <= j < x4 and y3 <= k < y4:
+            arr[j][k] = 0
+            
 xt1, yt1 = check(arr)
-
 xt2, yt2 = check1(arr)
 
 print((xt2 - xt1 + 1) * (yt2 - yt1 + 1))
