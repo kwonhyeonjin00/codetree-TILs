@@ -4,12 +4,10 @@ def f(n):
         arr.append(int(input()))
 
     lens = []
-    cnt = 1
+    cnt = 0
 
     for i in range(n):
-        if i == 0:
-            cnt += 1
-        elif arr[i] == arr[i - 1]:
+        if i == 0 or arr[i] == arr[i - 1]:
             cnt += 1
         else:
             lens.append(cnt)
