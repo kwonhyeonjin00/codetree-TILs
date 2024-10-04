@@ -12,9 +12,9 @@ for i in range(n):
                 continue
             elif arr[j][0] == 3:
                 arr[j][1] = 'g'
-            
-            arr[j][0] += 1
-            arr[j][1] = 'b'
+            else:
+                arr[j][0] += 1
+                arr[j][1] = 'b'
 
         idx += x
     elif t == 'L':
@@ -23,9 +23,9 @@ for i in range(n):
                 continue
             elif arr[j][0] == 3:
                 arr[j][1] = 'g'
-            
-            arr[j][0] += 1
-            arr[j][1] = 'w'
+            else:
+                arr[j][0] += 1
+                arr[j][1] = 'w'
         idx -= x 
 
 cnt_w = 0
