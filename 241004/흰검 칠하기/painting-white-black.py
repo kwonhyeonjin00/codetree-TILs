@@ -7,7 +7,7 @@ for i in range(n):
     x, t = input().split()
     x = int(x)
     if t == 'R':
-        for j in range(idx+1, idx+x+1):
+        for j in range(idx, idx+x):
             if arr[j][1] == 'g':
                 continue
             elif arr[j][0] == 3:
