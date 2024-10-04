@@ -1,16 +1,25 @@
 def check(arr):
+    minx, miny = 2001, 2001
+
     for i in range(2000):
         for j in range(2000):
             if arr[i][j] == 1:
-                return i, j
-            
-    return 2001, 2001
+                if j < miny:
+                    minx = i
+                    miny = j
+    return minx, miny
 
 def check1(arr):
+    maxx, maxy = -1, -1
+
     for i in range(1999, -1, -1):
         for j in range(1999, -1, -1):
             if arr[i][j] == 1:
-                return i, j
+                if maxx == -1:
+                    maxx = i
+                if j > maxy:
+                    maxy = j
+    return maxx, maxy
 
 arr = [[0 for _ in range(2000)] for _ in range(2000)]
 
@@ -34,5 +43,4 @@ if xt1 == 2001 and yt1 == 2001:
     print(0)
 else:
     xt2, yt2 = check1(arr)
-
     print((xt2 - xt1 + 1) * (yt2 - yt1 + 1))
