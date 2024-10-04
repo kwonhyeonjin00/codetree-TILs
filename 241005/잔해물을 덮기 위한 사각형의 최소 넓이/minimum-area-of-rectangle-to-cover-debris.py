@@ -26,5 +26,5 @@ for i in range(2000):
     for j in range(2000):
         if arr[i][j] == 1:
             xt2, yt2 = i, j
-print(xt1, yt1, xt2, yt2)
-print((xt2 - xt1+1) * (yt2 - yt1+1))
+
+print((xt2 - xt1 + 1) * (yt2 - yt1 + 1))
