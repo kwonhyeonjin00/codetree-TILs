@@ -12,7 +12,7 @@ for i in range(n):
             arr[j] += 1
         idx += x
     elif t == 'L':
-        for j in range(idx, idx-x, -1):
+        for j in range(idx-1, idx-x-1, -1):
             arr[j] += 1
         idx -= x 
 
