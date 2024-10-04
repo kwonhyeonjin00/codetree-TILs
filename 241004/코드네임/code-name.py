@@ -13,6 +13,7 @@ min = Spys[0].score
 idx = 0
 for i in range(1, 5):
     if Spys[i].score < min:
+        min = Spys[i].score
         idx = i
 
 print(Spys[idx].codename, Spys[idx].score)
