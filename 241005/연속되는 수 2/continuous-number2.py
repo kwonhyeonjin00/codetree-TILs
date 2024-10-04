@@ -1,21 +1,17 @@
-arr = []
-temp = []
-
 n = int(input())
+arr = []
+for i in range(n):
+    arr.append(int(input()))
+print(arr)
+lens = []
+cnt = 1
 
-num = int(input())
-temp.append(num)
-
-if n > 1:
-    for i in range(n-1):
-        num = int(input())
-        if num != temp[0]:
-            arr.append(len(temp))
-            temp = []
-        else:
-            temp.append(num)
-else:
-    arr.append(1)
-
-
-print(max(arr))
+for i in range(n):
+    if i == 0:
+        cnt += 1
+    elif arr[i] == arr[i - 1]:
+        cnt += 1
+    else:
+        lens.append(cnt)
+        cnt = 1
+print(max(lens))
