@@ -44,4 +44,4 @@ for i in range(1, len(a3)):
     elif a3[i] == a4[i] and a3[i-1] != a4[i-1]:
         fir == 0
         cnt += 1
-    print(i, cnt)
+print(cnt)
