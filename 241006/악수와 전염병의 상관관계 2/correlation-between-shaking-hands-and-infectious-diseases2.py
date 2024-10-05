@@ -22,6 +22,6 @@ for i in range(T):
     elif dis[y] > 0 and dis[x] > 0:
         cnt += 1
 
-arr.pop()
+arr.pop(0)
 for i in arr:
     print(i, end='')
