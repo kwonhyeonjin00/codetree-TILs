@@ -29,8 +29,10 @@ fir = 0
 
 for i in range(len(a3)):
     if fir == 0 and a3[i] > a4[i]:
+        cnt += 1
         fir = 1
     elif fir == 0 and a3[i] < a4[i]:
+        cnt += 1
         fir = 2
 
     elif fir == 1 and a3[i] < a4[i]:
@@ -42,4 +44,4 @@ for i in range(len(a3)):
     elif a3[i] == a4[i]:
         fir == 0
         cnt += 1
-print(cnt)
+print(cnt-1)
