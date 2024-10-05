@@ -6,8 +6,8 @@ for i in range(T):
     hand.append([t, x, y])
 hand.sort(key=lambda x: x)
 
-arr = [0 for _ in range(n+1)]
-dis = [0 for _ in range(n+1)]
+arr = [0] * (n + 1)
+dis = [0] * (n + 1)
 
 
 arr[p] = 1
@@ -26,6 +26,8 @@ for t, x, y in hand:
         dis[y] -= 1
         cnt += 1
     elif dis[y] > 0 and dis[x] > 0:
+        dis[x] -= 1
+        dis[y] -= 1
         cnt += 1
     
 arr.pop(0)
