@@ -10,5 +10,6 @@ for i in arr:
 
     if penalty[i] == k:
         ans = i
+        break
 
 print(ans)
