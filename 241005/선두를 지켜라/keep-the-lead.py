@@ -1,42 +1,44 @@
-def check1(arr):
-    cur = 0
-    for i in arr:
-        for j in range(int(i[1])):
-            a3.append(cur+int(i[0]))
-            cur += int(i[0])
+MAX_T = 1000000
 
+# 변수 선언 및 입력
+n, m = tuple(map(int, input().split()))
+pos_a, pos_b = [0] * (MAX_T + 1), [0] * (MAX_T + 1)
 
-def check2(arr):
-    cur = 0
-    for i in arr:
-        for j in range(int(i[1])):
-            a4.append(cur+int(i[0]))
-            cur += int(i[0])
+# A가 매 초마다 서있는 위치를 기록
+time_a = 1
+for _ in range(n):
+    v, t = tuple(map(int, input().split()))
+    for _ in range(t):
+        pos_a[time_a] = pos_a[time_a - 1] + v
+        time_a += 1
 
-n, m = map(int, input().split())
+# B가 매 초마다 서있는 위치를 기록
+time_b = 1
+for _ in range(m):
+    v, t = tuple(map(int, input().split()))
+    for _ in range(t):
+        pos_b[time_b] = pos_b[time_b - 1] + v
+        time_b += 1
 
-arr1 = [input().split() for _ in range(n)]
-arr2 = [input().split() for _ in range(m)]
+# A와 B 중 더 앞서 있는 경우를 확인합니다.
+# A가 리더면 1, B가 리더면 2로 관리합니다.
+leader, ans = 0, 0
+for i in range(1, time_a):
+    if pos_a[i] > pos_b[i]:
+        # 기존 리더가 B였다면
+        # 답을 갱신합니다.
+        if leader == 2:
+            ans += 1
 
-a3 = []
-a4 = []
+        # 리더를 A로 변경합니다.
+        leader = 1
+    elif pos_a[i] < pos_b[i]:
+        # 기존 리더가 A였다면
+        # 답을 갱신합니다.
+        if leader == 1:
+            ans += 1
 
-check1(arr1)
-check2(arr2)
-
-cnt = 0
-fir = 0
-
-for i in range(len(a3)):
-    if fir == 0 and a3[i] > a4[i]:
-        fir = 1
-    elif fir == 0 and a3[i] < a4[i]:
-        fir = 2
-
-    elif fir == 1 and a3[i] < a4[i]:
-        cnt += 1
-        fir = 2
-    elif fir == 2 and a3[i] > a4[i]:
-        cnt += 1
-        fir = 1
-print(cnt)
+        # 리더를 B로 변경합니다.
+        leader = 2
+        
+print(ans)
