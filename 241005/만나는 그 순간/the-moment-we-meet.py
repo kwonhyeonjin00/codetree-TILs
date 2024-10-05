@@ -32,8 +32,11 @@ a4 = []
 
 check1(arr1)
 check2(arr2)
-
+x = 0
 for i in range(len(a3)):
     if a3[i] == a4[i]:
         print(i+1)
+        x = 1
         break
+if x == 0:
+    print(-1)
