@@ -25,13 +25,15 @@ check1(arr1)
 check2(arr2)
 
 cnt = 0
-if a3[0] > a4[0]:
-    fir = 1
-else:
-    fir = 2
+fir = 0
 
-for i in range(1, len(a3)-1):
-    if fir == 1 and a3[i] < a4[i]:
+for i in range(len(a3)):
+    if fir == 0 and a3[i] > a4[i]:
+        fir = 1
+    elif fir == 0 and a3[i] < a4[i]:
+        fir = 2
+
+    elif fir == 1 and a3[i] < a4[i]:
         cnt += 1
         fir = 2
     elif fir == 2 and a3[i] > a4[i]:
