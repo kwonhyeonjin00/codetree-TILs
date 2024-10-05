@@ -18,12 +18,18 @@ n, m = map(int, input().split())
 arr1 = [input().split() for _ in range(n)]
 arr2 = [input().split() for _ in range(m)]
 
-a3 = []
-a4 = []
+a3 = [0]
+a4 = [0]
 
 check1(arr1)
 check2(arr2)
 
+for i in a3:
+    print(i, end=' ')
+print()
+for i in a4:
+    print(i, end=' ')
+print()
 cnt = 0
 fir = 0
 
@@ -41,7 +47,7 @@ for i in range(len(a3)):
     elif fir == 2 and a3[i] > a4[i]:
         cnt += 1
         fir = 1
-    elif a3[i] == a4[i]:
+    elif a3[i] == a4[i] and a3[i] != a4[i]:
         fir == 0
         cnt += 1
-print(cnt-1)
+print(cnt)
