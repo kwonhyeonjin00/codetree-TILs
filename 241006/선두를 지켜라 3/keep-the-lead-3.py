@@ -27,7 +27,7 @@ check2(arr2)
 cnt = 0
 fir = 0
 
-for i in range(len(a3)):
+for i in range(1, len(a3)):
     if fir == 0 and a3[i] > a4[i]:
         cnt += 1
         fir = 1
@@ -41,7 +41,7 @@ for i in range(len(a3)):
     elif fir == 2 and a3[i] > a4[i]:
         cnt += 1
         fir = 1
-    elif a3[i] == a4[i] and a3[i] != a4[i]:
+    elif a3[i] == a4[i] and a3[i-1] != a4[i-1]:
         fir == 0
         cnt += 1
-print(cnt)
+    print(i, cnt)
