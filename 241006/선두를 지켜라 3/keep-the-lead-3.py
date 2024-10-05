@@ -24,12 +24,6 @@ a4 = [0]
 check1(arr1)
 check2(arr2)
 
-for i in a3:
-    print(i, end=' ')
-print()
-for i in a4:
-    print(i, end=' ')
-print()
 cnt = 0
 fir = 0
 
