@@ -15,6 +15,7 @@ check = 0
 def checking(x, y, t):
     if x == 0 and y == 0:
         print(t)
+        x, y = 1001, 1001
 
 for i in range(n):
     d, s = input().split()
