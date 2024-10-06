@@ -11,6 +11,11 @@ direction = {
 x, y = 0, 0
 time = 0
 check = 0
+
+def checking(x, y, t):
+    if x == 0 and y == 0:
+        print(t)
+
 for i in range(n):
     d, s = input().split()
     s = int(s)
@@ -22,7 +27,7 @@ for i in range(n):
         time += 1
 
         if x == 0 and y == 0:
-            print(time)
+            checking(x, y, time)
             check = 1
             break
 
