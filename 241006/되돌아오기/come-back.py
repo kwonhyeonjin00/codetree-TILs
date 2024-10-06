@@ -10,7 +10,7 @@ direction = {
 }
 x, y = 0, 0
 time = 0
-
+check = 0
 for i in range(n):
     d, s = input().split()
     s = int(s)
@@ -23,4 +23,8 @@ for i in range(n):
 
         if x == 0 and y == 0:
             print(time)
+            check = 1
             break
+
+if check == 0:
+    print(-1)
