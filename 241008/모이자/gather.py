@@ -7,10 +7,9 @@ cur = 0
 for i in range(n):
     t = 0
     for j in range(n):
-        t += arr[j] * abs(j - cur)
+        t += arr[j] * abs(j - i)
 
     sum_min = min(sum_min, t)
-    cur += 1
 
 
 print(sum_min)
