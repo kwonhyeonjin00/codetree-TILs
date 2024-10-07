@@ -18,7 +18,9 @@ for i in range(1, n * m):
         x, y = x - dxs[dir_num], y - dys[dir_num]
         dir_num = (dir_num + 1) % 4
         x, y = x + dxs[dir_num], y + dys[dir_num]
-    arr[x][y] = chr((char + i) % 65 + 65)
+    if char + i == 91:
+        char -= 26
+    arr[x][y] = chr(char + i)
 
 for i in range(n):
     for j in range(m):
