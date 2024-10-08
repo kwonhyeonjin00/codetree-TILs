@@ -2,7 +2,7 @@ n = int(input())
 
 arr = [int(input()) for _ in range(n)]
 
-ans = 10000
+ans = 10000000000
 
 g = 0
 for i in range(n):
