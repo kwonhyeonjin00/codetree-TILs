@@ -9,7 +9,7 @@ def check(n):
             if arr[i][j] == n and arr[i + 1][j] == n and arr[i + 2][j] == n and arr[i + 3][j] == n and arr[i + 4][j] == n:
                 return i + 3, j + 1
     for i in range(15):
-        for j in range(4, 19):
+        for j in range(15):
             if arr[i][j] == n and arr[i + 1][j + 1] == n and arr[i + 2][j + 2] == n and arr[i + 3][j + 3] == n and arr[i + 4][j + 4] == n:
                 return i + 3, j + 3
     for i in range(15):
