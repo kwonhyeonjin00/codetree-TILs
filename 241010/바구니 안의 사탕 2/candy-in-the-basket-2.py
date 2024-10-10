@@ -8,11 +8,15 @@ for i in range(n):
 
 ans = 0
 
-for i in range(100 - k*2):
-    t = 0
-    for j in range(i, i + k*2 + 1):
-        t += arr[j]
+if k >= 50:
+    print(sum(arr))
+else:
+    for i in range(100 - k*2):
+        t = 0
+        if i >= 0:
+            for j in range(i, i + k*2 + 1):
+                t += arr[j]
 
-    ans = max(ans, t)
+            ans = max(ans, t)
 
-print(ans)
+    print(ans)
