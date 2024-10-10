@@ -1,4 +1,4 @@
-max_num = 100000
+max_num = 10000
 
 arr = [0] * max_num
 n, k = map(int, input().split())
