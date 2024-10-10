@@ -8,7 +8,7 @@ for i in range(n):
         t = 0
         for k in range(i, j + 1):
             t += arr[k]
-        if t / (j-i+1) in arr[:k+1]:
+        if t / (j-i+1) in arr[:j+1]:
             cnt += 1
 
 print(cnt)
