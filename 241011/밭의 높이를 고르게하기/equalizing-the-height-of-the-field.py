@@ -5,7 +5,7 @@ arr2 = []
 for i in range(n):
     arr2.append(abs(arr[i] - h))
 
-ans = 10000
+ans = 100000
 
 for i in range(n - t + 1):
     t = 0
