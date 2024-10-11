@@ -8,10 +8,10 @@ for i in range(n):
 ans = 10000000
 
 for i in range(n - t + 1):
-    t = 0
+    x = 0
     for j in range(i, i + t):
-        t += arr2[j]
+        x += arr2[j]
     
-    ans = min(ans, t)
+    ans = min(ans, x)
 
 print(ans)
