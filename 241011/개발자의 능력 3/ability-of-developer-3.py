@@ -7,8 +7,8 @@ def check(x, y, z):
 ans = 100000000
 
 for i in range(6):
-    for j in range(6):
-        for k in range(6):
+    for j in range(i+1, 6):
+        for k in range(j + 1, 6):
             t = check(i, j, k)
         ans = min(ans, t)
 
