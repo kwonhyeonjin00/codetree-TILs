@@ -19,8 +19,13 @@ arr.sort()
 t1 = arr[4]
 
 if arr[0] + arr[3] == t1 or arr[2] + arr[3] == t1 or arr[0] + arr[3] == arr[2] + arr[3]:
-    if arr[0] + arr[2] == t1 or arr[1] + arr[3] == t1 or arr[0] + arr[2] == arr[1] + arr[3]: 
-        print(-1)
+    if arr[0] + arr[2] == t1 or arr[1] + arr[3] == t1 or arr[0] + arr[2] == arr[1] + arr[3]:
+        if arr[0] + arr[1] == t1 or arr[2] + arr[3] == t1 or arr[0] + arr[1] == arr[2] + arr[3]:
+            print(-1)
+        else:
+            x = check_max(arr[0] + arr[1], arr[2] + arr[3], t1)
+            y = check_min(arr[0] + arr[1], arr[2] + arr[3], t1)
+            print(x - y)
     else:
         x = check_max(arr[0] + arr[2], arr[1] + arr[3], t1)
         y = check_min(arr[0] + arr[2], arr[1] + arr[3], t1)
