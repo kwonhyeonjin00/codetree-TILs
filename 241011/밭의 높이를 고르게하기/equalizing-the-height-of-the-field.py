@@ -9,7 +9,7 @@ ans = 10000000
 
 for i in range(n - t + 1):
     t = 0
-    for j in range(i, i + 3):
+    for j in range(i, i + t):
         t += arr2[j]
     
     ans = min(ans, t)
