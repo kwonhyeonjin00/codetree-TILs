@@ -30,4 +30,7 @@ for i in range(5):
             arr3.append(max_num - min_num)
 
     arr.insert(i, temp)
-print(min(arr3))
+if arr3:
+    print(min(arr3))
+else:
+    print(-1)
