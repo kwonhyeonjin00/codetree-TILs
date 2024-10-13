@@ -6,15 +6,18 @@ for i in range(65, 65 + n):
 
 ans = [[] for _ in range(m)]
 
+chk = 1
 for j in range(m):
     c, u = input().split()
-    u = int(u)
+    if u == '0':
+        chk = 0
     for k in range(j+1):
         ans[k].append(c)
 
-
-for l in range(n):
-    if arr[l] in ans[p-1]:
-        pass
-    else:
-        print(arr[l], end=' ')
+if chk == 1:
+    for l in range(n):
+        if 
+        if arr[l] in ans[p-1]:
+            pass
+        else:
+            print(arr[l], end=' ')
