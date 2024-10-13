@@ -1,21 +1,23 @@
 n, m, p = map(int, input().split())
 arr = []
+chk = []
 
 for i in range(65, 65 + n):
     arr.append(chr(i))
 
 ans = [[] for _ in range(m)]
 
-chk = 1
+
 for j in range(m):
     c, u = input().split()
-    if u == '0':
-        chk = 0
+
     for k in range(j+1):
         ans[k].append(c)
+    chk.append(int(u))
 
-if chk == 1:
-    for l in range(n):
+
+for l in range(n):
+    if chk[p-1] != 0:
         if arr[l] in ans[p-1]:
             pass
         else:
