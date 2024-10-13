@@ -16,7 +16,6 @@ for j in range(m):
 
 if chk == 1:
     for l in range(n):
-        if 
         if arr[l] in ans[p-1]:
             pass
         else:
