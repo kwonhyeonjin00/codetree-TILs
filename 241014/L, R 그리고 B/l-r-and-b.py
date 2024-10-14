@@ -7,4 +7,4 @@ for i in range(10):
         elif arr[i][j] == 'L':
             Lx, Ly = i, j
 
-print(abs(Bx - Lx) + abs(Lx - Ly) - 1)
+print(abs(Bx - Lx) + abs(By - Ly) - 1)
