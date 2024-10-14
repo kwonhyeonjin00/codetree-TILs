@@ -6,5 +6,11 @@ for i in range(10):
             Bx, By = i, j
         elif arr[i][j] == 'L':
             Lx, Ly = i, j
+        elif arr[i][j] == 'R':
+            Rx, Ry = i, j
 
-print(abs(Bx - Lx) + abs(By - Ly) - 1)
+t = 0
+if Bx == Lx == Rx or By == Ly == Ry:
+    t = 2
+
+print(abs(Bx - Lx) + abs(By - Ly) - 1 + t)
