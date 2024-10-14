@@ -1,6 +1,6 @@
 n = int(input())
 A, B = 0, 0
-first = ['Z']
+first = ['A', 'B']
 
 cnt = 0
 
