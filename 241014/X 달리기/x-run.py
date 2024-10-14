@@ -4,6 +4,12 @@ def min_move(n):
         t += i
     return t
 
+def same_move(n):
+    t = 0
+    for i in range(n + 1):
+        t += i
+    return t
+
 def max_move(n):
     t = 0
     for i in range(n + 2):
@@ -23,14 +29,16 @@ while True:
     s += v
     time += 1
 
-    move = min_move(v)
-    tx = n - s - move
+    min_m = min_move(v)
+    same_m = same_move(v)
+    max_m = max_move(v)
+    
+    tx = n - s
 
-    if tx > v:
-        if max_move(v) <= tx:
-            v += 1
-    elif tx < v:
+    if tx == min_m or tx < same_m:
         if v > 1:
             v -= 1
-
+    elif max_m <= tx:
+        v += 1
+        
 print(time)
