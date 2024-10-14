@@ -10,7 +10,9 @@ for i in range(10):
             Rx, Ry = i, j
 
 t = 0
-if Bx == Lx == Rx or By == Ly == Ry:
+if Bx == Lx == Rx and (Bx < Rx < Lx or Bx > Rx > Lx):
     t = 2
+if By == Ly == Ry and (By < Ry < Ly or By > Ry > Ly):
+    t == 2
 
 print(abs(Bx - Lx) + abs(By - Ly) - 1 + t)
