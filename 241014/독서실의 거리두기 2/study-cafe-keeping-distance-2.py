@@ -24,7 +24,4 @@ if arr_index[-1] != n - 1:
     diff.append(n - 1 - arr_index[-1])
 
 
-print(arr_index)
-print(diff)
-
 print(min(max(diff), temp))
