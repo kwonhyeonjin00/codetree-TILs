@@ -40,4 +40,9 @@ if arr1:
 else:
     t5 = -1001
 
-print(max(t1 * t2 * t3, t1 * t4 * t5))
+if t1 == -1001:
+    t6 = min(arr1)
+    arr1.pop(arr1.index(t6))
+else:
+    t6 = t1
+print(max(t1 * t2 * t3, t4 * t5 * t6))
