@@ -5,11 +5,16 @@ t = 2 * m + 1
 
 cnt = 0
 
-for i in range(0, n, t):
-    for j in range(t):
-        if i + j < n:
-            if arr[i + j] == 1:
-                cnt += 1
-                break
+while True:
+    if arr:
+        if arr[0] == 0:
+            arr.pop(0)
+        elif arr[0] == 1:
+            arr.pop(0)
+            arr.pop(0)
+            arr.pop(0)
+            cnt += 1
+    else:
+        break
 
 print(cnt)
