@@ -7,10 +7,10 @@ diff = []
 for i in range(n):
     if arr[i] == '1':
         arr_index.append(i)
-x = n
+temp = n
 for i in range(len(arr_index) - 1):
     t = arr_index[i + 1] - arr_index[i]
-    x = min(x, t)
+    temp = min(temp, t)
 
 if arr_index[0] != 0:
     diff.append(arr_index[0])
@@ -24,6 +24,7 @@ if arr_index[-1] != n - 1:
     diff.append(n - 1 - arr_index[-1])
 
 
-#print(arr_index)
-#print(diff)
-print(min(max(diff), x))
+print(arr_index)
+print(diff)
+
+print(min(max(diff), temp))
