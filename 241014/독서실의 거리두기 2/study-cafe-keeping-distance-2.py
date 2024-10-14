@@ -18,4 +18,7 @@ for j in range(len(arr_index) - 1):
 if arr_index[-1] != n - 1:
     diff.append(n - 1 - arr_index[-1])
 
-print(min(diff))
+
+#print(arr_index)
+#print(diff)
+print(max(diff))
