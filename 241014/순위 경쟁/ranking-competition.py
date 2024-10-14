@@ -14,10 +14,10 @@ for i in range(n):
         score[1] += s
     elif c == "C":
         score[2] += s
-
-    for i in range(3):
-        if score[i] == max(score):
-            fir[i] = 1
+    if s != 0:
+        for i in range(3):
+            if score[i] == max(score):
+                fir[i] = 1
 
     if first != fir:
         cnt += 1
