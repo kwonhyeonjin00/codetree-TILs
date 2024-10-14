@@ -7,8 +7,9 @@ cnt = 0
 
 for i in range(0, n, t):
     for j in range(t):
-        if arr[i + j] == 1:
-            cnt += 1
-            break
+        if i + j < n:
+            if arr[i + j] == 1:
+                cnt += 1
+                break
 
 print(cnt)
