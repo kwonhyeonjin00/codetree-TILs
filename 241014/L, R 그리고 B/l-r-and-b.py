@@ -13,6 +13,6 @@ t = 0
 if Bx == Lx == Rx and (Bx < Rx < Lx or Bx > Rx > Lx):
     t = 2
 if By == Ly == Ry and (By < Ry < Ly or By > Ry > Ly):
-    t == 2
+    t = 2
 
 print(abs(Bx - Lx) + abs(By - Ly) - 1 + t)
