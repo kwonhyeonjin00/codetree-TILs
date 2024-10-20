@@ -6,6 +6,7 @@ class Stack():
         self.items.append(item)
 
     def pop(self):
+        #print(str(self.items.pop()) + "////////")
         return self.items.pop()
 
     def size(self):
