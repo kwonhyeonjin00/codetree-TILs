@@ -6,7 +6,6 @@ class Stack():
         self.items.append(item)
 
     def pop(self):
-        #print(str(self.items.pop()) + "////////")
         return self.items.pop()
 
     def size(self):
@@ -37,4 +36,4 @@ for i in range(n):
     elif x[0] == 'empty':
         print(stack.empty())
     elif x[0] == 'top':
-        print(stack.top)
+        print(stack.top())
