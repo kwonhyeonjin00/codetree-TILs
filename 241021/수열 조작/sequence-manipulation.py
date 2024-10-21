@@ -1,8 +1,13 @@
+from collections import deque
+
 n = int(input())
-arr = [i for i in range(1, n + 1)]
+dq = deque()
 
-for i in range(n - 1):
-    arr.pop(0)
-    arr.append(arr.pop(0))
+for i in range(1, n + 1):
+    dq.append(i)
 
-print(arr[0])
+while len(dq) > 1:
+    dq.popleft()
+    dq.append(dq.popleft())
+
+print(dq[0])
