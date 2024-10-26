@@ -15,6 +15,7 @@ for i in range(n):
         
         if x == m:
             ans += 1
+            break
 
 #print(ans)
 for i in range(n):
@@ -29,5 +30,6 @@ for i in range(n):
         
         if x == m:
             ans += 1
+            break
 
 print(ans)
