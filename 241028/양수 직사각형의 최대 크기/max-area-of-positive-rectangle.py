@@ -1,4 +1,4 @@
-def check2(arr3, i, column):
+def check2(i, column):
     row = 1
 
     while True:
@@ -6,7 +6,7 @@ def check2(arr3, i, column):
         row += 1
         chk = True
         for k in column:
-            if i >= dn or arr3[i][k] <= 0:
+            if i >= dn or arr[i][k] <= 0:
                 chk = False
                 break
 
@@ -15,19 +15,19 @@ def check2(arr3, i, column):
             break
     return row
 
-def check1(arr3, i, j):
+def check1(i, j):
     col = 1
     column = [j]
     while True:
         j += 1
         col += 1
-        if j >= dm or arr3[i][j] <= 0:
+        if j >= dm or arr[i][j] <= 0:
             col -= 1
             break
         else:
             column.append(j)
 
-    row_num = check2(arr3, i, column)
+    row_num = check2(i, column)
     return row_num * col
 
 n, m = map(int, input().split())
@@ -43,7 +43,7 @@ for i in range(n):
         if arr[i][j] <= 0:
             continue
         else:
-            ans = max(ans, check1(arr, i, j))
+            ans = max(ans, check1(i, j))
 
 arr2 = []
 for i in range(m):
@@ -51,6 +51,7 @@ for i in range(m):
     for j in range(n):
         t.append(arr[j][i])
     arr2.append(t)
+arr = arr2
 
 dn, dm = m, n
 
@@ -60,6 +61,6 @@ for i in range(dn):
         if arr2[i][j] <= 0:
             continue
         else:
-            ans = max(ans, check1(arr2, i, j))
+            ans = max(ans, check1(i, j))
 
 print(ans)
