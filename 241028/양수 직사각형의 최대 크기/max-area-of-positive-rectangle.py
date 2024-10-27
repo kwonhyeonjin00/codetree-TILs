@@ -48,8 +48,8 @@ for i in range(m):
         t.append(arr[j][i])
     arr2.append(t)
 
-for i in range(n):
-    for j in range(m):
+for i in range(m):
+    for j in range(n):
         t = 0
         if arr2[i][j] <= 0:
             continue
