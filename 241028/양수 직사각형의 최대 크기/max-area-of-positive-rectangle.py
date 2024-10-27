@@ -41,4 +41,19 @@ for i in range(n):
         else:
             ans = max(ans, check1(i, j))
 
+arr2 = []
+for i in range(m):
+    t = []
+    for j in range(n):
+        t.append(arr[j][i])
+    arr2.append(t)
+
+for i in range(n):
+    for j in range(m):
+        t = 0
+        if arr2[i][j] <= 0:
+            continue
+        else:
+            ans = max(ans, check1(i, j))
+
 print(ans)
