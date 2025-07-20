@@ -1,4 +1,4 @@
-N = int(input())
+
 
 # Please write your code here.
 def hap(n):
@@ -8,5 +8,5 @@ def hap(n):
         return 2
 
     return hap(n - 2) + n
-
+N = int(input())
 print(hap(N))
