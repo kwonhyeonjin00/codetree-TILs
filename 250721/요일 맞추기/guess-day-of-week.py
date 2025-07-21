@@ -6,7 +6,7 @@ day_of_the_week = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
 c = 0
 
-if m1 > m2 or (m1 == m2 and m1 > d2):
+if m1 > m2 or (m1 == m2 and d1 > d2):
     m1, d1, m2, d2 = m2, d2, m1, d1
     c = 1
 diff = 0
