@@ -9,7 +9,7 @@ for num, direction in commands:
 # Please write your code here.
 stack = [0 for _ in range(200000)]
 
-pos = 10000
+pos = 100000
 
 for i in range(n):
     if dir[i] == 'R':
