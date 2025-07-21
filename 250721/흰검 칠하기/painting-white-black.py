@@ -7,65 +7,35 @@ for num, direction in commands:
     dir.append(direction)
 
 # Please write your code here.
-stack = [0 for _ in range(200000)]
+stack = [[0, 0, 'a'] for _ in range(200000)]
 
 pos = 100000
 
 for i in range(n):
-    if dir[i] == 'R':
-        pos -= 1
-    else:
-        pos += 1
-    for j in range(x[i]):     
-        if dir[i] == 'R':
-            pos += 1
-            if stack[pos] == 0:
-                stack[pos] = 1
-            elif stack[pos] == 1:
-                stack[pos] = 100 
-            elif stack[pos] == 10:
-                stack[pos] = 113
-            elif stack[pos] == 11:
-                stack[pos] = 110
-            elif stack[pos] == 101:
-                stack[pos] = 111
-            elif stack[pos] == 112:
-                stack[pos] = 110
-            elif stack[pos] == 113:
-                stack[pos] = 110
-            elif stack[pos] == 111:
-                stack[pos] = 1000
-        
-        elif dir[i] == 'L':
+    if dir[i] == 'L':
+        stack[pos][0] += 1
+        stack[pos][2] = 'w'
+        for j in range(x[i] - 1):
             pos -= 1
-            if stack[pos] == 0:
-                stack[pos] = 10
-            elif stack[pos] == 1:
-                stack[pos] = 112
-            elif stack[pos] == 10:
-                stack[pos] = 101
-            elif stack[pos] == 11:
-                stack[pos] = 111
-            elif stack[pos] == 100:
-                stack[pos] = 110
-            elif stack[pos] == 112:
-                stack[pos] = 111
-            elif stack[pos] == 113:
-                stack[pos] = 111
-            elif stack[pos] == 110:
-                stack[pos] = 1000
+            stack[pos][0] += 1
+            stack[pos][2] = 'w'
 
-cnt_b, cnt_w, cnt_g = 0, 0, 0
-cnt_b += stack.count(1)
-cnt_b += stack.count(100)
-cnt_b += stack.count(110)
-cnt_b += stack.count(113)
+    elif dir[i] == 'R':
+        stack[pos][1] += 1
+        stack[pos][2] = 'b'
+        for j in range(x[i] - 1):
+            pos += 1
+            stack[pos][1] += 1
+            stack[pos][2] = 'b'
 
-cnt_w += stack.count(10)
-cnt_w += stack.count(101)
-cnt_w += stack.count(111)
-cnt_w += stack.count(112)
+cnt_w, cnt_b, cnt_g = 0, 0, 0
 
-cnt_g += stack.count(1000)
+for k in stack:
+    if k[0] >= 2 and k[1] >= 2:
+        cnt_g += 1
+    elif k[2] == 'w':
+        cnt_w += 1
+    elif k[2] == 'b':
+        cnt_b += 1
 
 print(cnt_w, cnt_b, cnt_g)
