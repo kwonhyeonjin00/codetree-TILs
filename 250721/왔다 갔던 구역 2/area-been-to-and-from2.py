@@ -12,14 +12,13 @@ stack = [0 for _ in range(2000)]
 pos = 1000
 
 for i in range(n):
-    for j in range(x[i]):
-        
+    for j in range(x[i]):     
         if dir[i] == 'R':
+            stack[pos] += 1
             pos += 1
-        else:
+        elif dir[i] == 'L':
             pos -= 1
-
-        stack[pos] += 1
+            stack[pos] += 1
 cnt = 0
 
 for k in range(2000):
