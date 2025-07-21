@@ -7,9 +7,9 @@ for num, direction in commands:
     dir.append(direction)
 
 # Please write your code here.
-stack = [0 for _ in range(20)]
+stack = [0 for _ in range(200000)]
 
-pos = 10
+pos = 10000
 
 for i in range(n):
     if dir[i] == 'R':
