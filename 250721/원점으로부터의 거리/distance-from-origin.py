@@ -11,7 +11,7 @@ distance = []
 for i in range(n):
     distance.append(Distance(points[i][0], points[i][1][0], points[i][1][1]))
 
-distance.sort(key=lambda x: (x.d_x ** 2 + x.d_y ** 2, x.number))
+distance.sort(key=lambda x: (abs(x.d_x) + abs(x.d_y), x.number))
 
 for t in distance:
    print(t.number)
