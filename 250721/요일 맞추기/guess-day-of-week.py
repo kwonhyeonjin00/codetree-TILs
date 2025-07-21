@@ -11,14 +11,19 @@ if m1 > m2 or (m1 == m2 and m1 > d2):
     c = 1
 diff = 0
 
-if m1 == m2:
-    diff = d2 - d1
-else:
-    for i in range(m1, m2):
-        diff += days[i]
-    diff = days[m1] - d1 + d2
+while True:
+    if m1 == m2 and d1 == d2:
+        break
 
+    d1 += 1
+    diff += 1
+
+    if d1 > days[m1]:
+        m1 += 1
+        d1 = 1
 diff %= 7
+
 if c == 1:
     diff *= -1
+
 print(day_of_the_week[diff])
