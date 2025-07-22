@@ -47,7 +47,7 @@ for i in range(1999, 0, -1):
         break
     for j in range(1999, 0, -1):
         if stack[i][j] == 1:
-            max_x1, max_y1 = i, j
+            max_x1, max_y1 = i + 1, j + 1
             break
 
 for i in range(1999, 0, -1):
@@ -55,7 +55,7 @@ for i in range(1999, 0, -1):
         break
     for j in range(1999, 0, -1):
         if stack[j][i] == 1:
-            max_x2, max_y2 = j, i
+            max_x2, max_y2 = j + 1, i + 1
             break
 
 ans_x1 = min(min_x1, min_x2)
@@ -63,4 +63,4 @@ ans_y1 = min(min_y1, min_y2)
 ans_x2 = max(max_x1, max_x2)
 ans_y2 = max(max_y1, max_y2)
 
-print((ans_x2 - ans_x1 + 1) * (ans_y2 - ans_y1 + 1))
+print((ans_x2 - ans_x1) * (ans_y2 - ans_y1))
