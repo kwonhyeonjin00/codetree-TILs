@@ -3,7 +3,7 @@ arr = [int(input()) for _ in range(n)]
 
 # Please write your code here.
 l = 1
-l_list = [0]
+l_list = [1]
 
 for i in range(1, n):
 
