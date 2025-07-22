@@ -21,17 +21,46 @@ for j in range(t1, t2):
     for k in range(s1, s2):
         stack[j][k] = 0
 
-cnt_x = []
-cnt_y = []
-
-for i in stack:
-    cnt_x.append(i.count(1))
+max_x1, max_y1 = 0, 0
+max_x2, max_y2 = 0, 0
+min_x1, min_y1 = 0, 0
+min_x2, min_y2 = 0, 0
 
 for i in range(2000):
-    cnt = 0
+    if min_x1 != 0 and min_y1 != 0:
+        break
+    for j in range(2000):
+        if stack[i][j] == 1:
+            min_x1, min_y1 = i, j
+            break
+
+for i in range(2000):
+    if min_x2 != 0 and min_y2 != 0:
+        break
     for j in range(2000):
         if stack[j][i] == 1:
-            cnt += 1
-    cnt_y.append(cnt)
+            min_x2, min_y2 = j, i
+            break
 
-print(max(cnt_x) * max(cnt_y))
+for i in range(1999, 0, -1):
+    if max_x1 != 0 and max_y1 != 0:
+        break
+    for j in range(1999, 0, -1):
+        if stack[i][j] == 1:
+            max_x1, max_y1 = i, j
+            break
+
+for i in range(1999, 0, -1):
+    if max_x2 != 0 and max_y2 != 0:
+        break
+    for j in range(1999, 0, -1):
+        if stack[j][i] == 1:
+            max_x2, max_y2 = j, i
+            break
+
+ans_x1 = min(min_x1, min_x2)
+ans_y1 = min(min_y1, min_y2)
+ans_x2 = max(max_x1, max_x2)
+ans_y2 = max(max_y1, max_y2)
+
+print((ans_x2 - ans_x1 + 1) * (ans_y2 - ans_y1 + 1))
