@@ -13,6 +13,6 @@ for i in range(1, n):
     else:
         l_list.append(l)
         l = 1
-
+l_list.append(l)
 
 print(max(l_list))
