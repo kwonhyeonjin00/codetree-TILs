@@ -1,9 +1,9 @@
 n = int(input())
-arr = [int(input()) for _ in range(n)]
+arr = [int(input()) for _ in range(n)] 
 
 # Please write your code here.
 l = 1
-l_list = []
+l_list = [0]
 
 for i in range(1, n):
 
@@ -13,5 +13,6 @@ for i in range(1, n):
     else:
         l_list.append(l)
         l = 1
+
 
 print(max(l_list))
