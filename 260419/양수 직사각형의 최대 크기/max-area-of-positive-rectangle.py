@@ -13,7 +13,7 @@ for i in range(n):
             else:
                 cnt_list[i][j] = cnt_list[i - 1][j] + 1
 
-res = [0]
+res = [-1]
 
 for i in range(n):
     for j in range(m):
@@ -29,5 +29,6 @@ for i in range(n):
                 break
             res.append(h * size)
 
+res = [x for x in res if x != 0]
 print(max(res))
             
