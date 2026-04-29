@@ -3,63 +3,34 @@ grid = [list(map(int, input().split())) for _ in range(n)]
 commands = [int(input()) for _ in range(m)]
 
 for c in commands:
+    r = -1
     c -= 1
 
     for i in range(n):
         if grid[i][c] > 0:
             r = i
             break
-    
+    if r == -1:
+        continue
+
     x = grid[r][c]
     
     grid[r][c] = 0
 
-    dx, dy = r, c
-        # 위 제거
-    for i in range(x - 1):
-        dx -= 1
-        if dx >= 0:
-            grid[dx][dy] = 0
-        else:
-            break
-
-    dx, dy = r, c
-    # 오른쪽 제거
-    for i in range(x - 1):
-        dy += 1
-        if dy < n:
-            grid[dx][dy] = 0
-        else:
-            break
-
-    dx, dy = r, c
-    # 왼쪽 제거
-    for i in range(x - 1):
-        dy -= 1
-        if dy >= 0:
-            grid[dx][dy] = 0
-        else:
-            break
-
-    dx, dy = r, c
-    # 아래 제거
-    for i in range(x - 1):
-        dx += 1
-        if dx < n:
-            grid[dx][dy] = 0
-        else:
-            break
-    
-    ans = list(map(list, zip(*grid[::-1])))
-
     for i in range(n):
-        ans[i] = [x for x in ans[i] if x > 0]
-        while len(ans[i]) < n:
-            ans[i].append(0)
+        for j in range(n):
+           if (i == r and abs(j - c) < x) or (j == c and abs(i - r) < x):
+            grid[i][j] = 0
+    
+    for col in range(n):
+        temp = []
+        for row in range(n):
+            if grid[row][col] > 0:
+                temp.append(grid[row][col])
 
-    ans = [row[::-1] for row in ans]
-    ans = list(map(list, zip(*ans)))
+        new = [0] * (n - len(temp)) + temp
+        for row in range(n):
+            grid[row][col] = new[row]
 
-
-for row in ans:
+for row in grid:
     print(*row)
